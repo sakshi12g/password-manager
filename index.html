@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrustKey - Your Personal Password Manager</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      box-sizing: border-box;
+    }
+
+    /* Navbar */
+    nav {
+      background: #222;
+      color: white;
+      padding: 15px;
+    }
+    nav ul {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    nav ul li {
+      list-style: none;
+      margin: 0 15px;
+      cursor: pointer;
+    }
+    nav ul li:hover {
+      color: #ff9800;
+    }
+
+    /* Container */
+    .container {
+      padding: 20px;
+      max-width: 800px;
+      margin: 20px auto;
+      background: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Table */
+    table {
+      border: 2px solid black;
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 15px;
+    }
+    table th, table td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+    table th {
+      background: #eee;
+    }
+
+    /* Form */
+    form label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input {
+      padding: 8px;
+      width: 100%;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button.btn {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #007BFF;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button.btn:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li>Home</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+  </nav>
+
+  <!-- Main Container -->
+  <div class="container">
+    <p>Welcome to TrustKey 🔐<br>
+    Your trusted vault for managing and protecting your passwords.<br>
+    Secure, simple, and always in your control.</p>           
+    <h1>Password Manager</h1>
+    
+    <h2>Your Passwords</h2>
+    <table>
+      <tr>
+        <th>Website</th>
+        <th>Username</th>
+        <th>Password</th>
+      </tr>
+      <tr>
+        <td>Blush Rush</td>
+        <td>BlushUser</td>
+        <td>sakshi@Blushrush.com</td>
+      </tr>
+      <tr>
+        <td>Lipstick Logic</td>
+        <td>LipstickUser</td>
+        <td>sakshi@Lipsticklogic.com</td>
+      </tr>
+    </table>
+
+    <h2>Add a Password</h2>
+    <form action="/submit" method="post">
+
+
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <button class="btn" type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
